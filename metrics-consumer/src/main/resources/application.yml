@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  kafka:
+    consumer:
+      group-id: "default"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/t1_homework3
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+
+topic:
+  name: metrics-topic
